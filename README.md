@@ -17,7 +17,7 @@ To deploy the backend run
 ```
 ## Frontend Deployment
 
-To deploy the backend run
+To deploy the frontend run
 
 ```bash
   cd client
