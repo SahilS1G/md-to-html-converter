@@ -7,12 +7,14 @@ function Blogs({ files }) {
             <h1>
                 All Blogs
             </h1>
-            {files.map((file, index) => {
-                return (
-                    <h1>{file}</h1>
-                )
-            })
-            }
+            <div className='px-4'>
+                {files.map((file, index) => {
+                    return (
+                        <Blog title={file} key={index} />
+                    )
+                })
+                }
+            </div>
         </div>
     )
 }
