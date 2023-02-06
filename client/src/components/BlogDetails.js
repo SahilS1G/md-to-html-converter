@@ -6,6 +6,7 @@ function BlogDetails() {
     const { id } = useParams();
 
     const [html, setHtml] = useState("");
+
     useEffect(() => {
         fetch('/getfiles/' + id).then(
             res => res.json()
@@ -16,7 +17,9 @@ function BlogDetails() {
 
     return (
         <>
-            {html}
+            <div className="container" dangerouslySetInnerHTML={{ __html: html }}>
+
+            </div>
         </>
     )
 }
