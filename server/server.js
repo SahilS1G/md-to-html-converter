@@ -11,9 +11,9 @@ app.get('/getfiles/:id', (req, res) => {
 
 
     const data = fs.readFileSync(testFolder + '/' + id, 'utf8');
-    console.log("data: " + data)
+    // console.log("data: " + data)
 
-    // const html = marked.parse(data);
+    const html = marked.parse(data);
 
     res.json({ "html": html });
 });
